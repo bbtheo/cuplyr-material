@@ -4,6 +4,16 @@ Benchmarks, results and social-media material for [cuplyr](https://github.com/bb
 the GPU-backed dplyr API for R. The package itself lives in its own repository; this project
 holds what is written about it.
 
+## Try it on Colab
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bbtheo/cuplyr-material/blob/main/notebooks/try-cuplyr-colab.ipynb)
+
+`notebooks/try-cuplyr-colab.ipynb` installs cuplyr on a free Colab T4 and runs a few pipelines,
+including a dplyr-versus-cuplyr timing on 2e7 rows. It uses the default Python runtime: the first
+cell puts R, RAPIDS libcudf and the CUDA toolkit into one micromamba env under `/opt/cuplyr` and
+builds cuplyr from GitHub, so nothing mixes with Colab's own R or libstdc++. Cells that start
+with `%%R` run in one R session that lasts as long as the notebook.
+
 ## Layout
 
 ```
@@ -18,6 +28,8 @@ benchmarks/
   report-src/         template and build script for the rolling report
 social/
   parquet-to-summary/ the four post images, plus build/ with the scripts that make them
+notebooks/
+  try-cuplyr-colab.ipynb  install-and-try notebook for Google Colab
 ```
 
 Not tracked (see `.gitignore`): the generated parquet files (`parquet-pipeline/data/`, 4.6 GB),
