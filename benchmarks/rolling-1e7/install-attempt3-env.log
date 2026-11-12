@@ -1,0 +1,263 @@
+[gpu-run] lock acquired after 0s (r)
+cuplyr: GPU-accelerated data manipulation
+GPU: NVIDIA GeForce RTX 5070 (12.0)
+Memory: 11.7 GB free / 12.4 GB total
+== installing roll
+also installing the dependency ‘RcppParallel’
+
+trying URL 'https://cloud.r-project.org/src/contrib/RcppParallel_6.2.1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/roll_1.2.1.tar.gz'
+begin installing package ‘RcppParallel’
+make: *** [Makefile:4: RcppParallel.ts] Error 1
+make: Target 'all' not remade because of errors.
+* installing *source* package ‘RcppParallel’ ...
+** this is package ‘RcppParallel’ version ‘6.2.1’
+** package ‘RcppParallel’ successfully unpacked and MD5 sums checked
+** using staged installation
+** preparing to configure package 'RcppParallel' ...
+*** configured file: 'R/tbb-autodetected.R.in' => 'R/tbb-autodetected.R'
+*** configured file: 'src/Makevars.in' => 'src/Makevars'
+** finished configure for package 'RcppParallel'
+** libs
+using C++ compiler: ‘g++ (GCC) 16.2.1 20260810’
+make[1]: Entering directory '/tmp/RtmpuHXYNF/R.INSTALL823fe4f97f387/RcppParallel/src'
+** copying tbb headers from 'tbb/include'
+** mingw cpuid guard already present in '../inst/include/oneapi/tbb/detail/_machine.h'
+*** configuring tbb
+CMake Warning (deprecated) at CMakeLists.txt:15 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- The CXX compiler identification is GNU 14.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - failed
+-- Check for working CXX compiler: /home/theo/cuplr/.pixi/envs/default/bin/g++
+-- Check for working CXX compiler: /home/theo/cuplr/.pixi/envs/default/bin/g++ - broken
+CMake Error at /usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:71 (message):
+  The C++ compiler
+
+    "/home/theo/cuplr/.pixi/envs/default/bin/g++"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/tmp/RtmpuHXYNF/R.INSTALL823fe4f97f387/RcppParallel/src/tbb/build-tbb/CMakeFiles/CMakeScratch/TryCompile-WER5i1'
+    
+    Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_16f65/fast
+    make[2]: Entering directory '/tmp/RtmpuHXYNF/R.INSTALL823fe4f97f387/RcppParallel/src/tbb/build-tbb/CMakeFiles/CMakeScratch/TryCompile-WER5i1'
+    make  -f CMakeFiles/cmTC_16f65.dir/build.make CMakeFiles/cmTC_16f65.dir/build
+    make[3]: Entering directory '/tmp/RtmpuHXYNF/R.INSTALL823fe4f97f387/RcppParallel/src/tbb/build-tbb/CMakeFiles/CMakeScratch/TryCompile-WER5i1'
+    Building CXX object CMakeFiles/cmTC_16f65.dir/testCXXCompiler.cxx.o
+    /home/theo/cuplr/.pixi/envs/default/bin/g++   -I/usr/local/include -std=gnu++20 -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -o CMakeFiles/cmTC_16f65.dir/testCXXCompiler.cxx.o -c /tmp/RtmpuHXYNF/R.INSTALL823fe4f97f387/RcppParallel/src/tbb/build-tbb/CMakeFiles/CMakeScratch/TryCompile-WER5i1/testCXXCompiler.cxx
+    Linking CXX executable cmTC_16f65
+    /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16f65.dir/link.txt --verbose=1
+    /home/theo/cuplr/.pixi/envs/default/bin/../libexec/gcc/x86_64-conda-linux-gnu/14.3.0/ld: /home/theo/cuplr/.pixi/envs/default/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/Scrt1.o: in function `_start':
+    (.text+0x16): undefined reference to `__libc_csu_fini'
+    /home/theo/cuplr/.pixi/envs/default/bin/../libexec/gcc/x86_64-conda-linux-gnu/14.3.0/ld: (.text+0x1d): undefined reference to `__libc_csu_init'
+    collect2: error: ld returned 1 exit status
+    /home/theo/cuplr/.pixi/envs/default/bin/g++ -I/usr/local/include -std=gnu++20 -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -L/usr/lib  CMakeFiles/cmTC_16f65.dir/testCXXCompiler.cxx.o -o cmTC_16f65
+    make[3]: *** [CMakeFiles/cmTC_16f65.dir/build.make:102: cmTC_16f65] Error 1
+    make[3]: Leaving directory '/tmp/RtmpuHXYNF/R.INSTALL823fe4f97f387/RcppParallel/src/tbb/build-tbb/CMakeFiles/CMakeScratch/TryCompile-WER5i1'
+    make[2]: *** [Makefile:134: cmTC_16f65/fast] Error 2
+    make[2]: Leaving directory '/tmp/RtmpuHXYNF/R.INSTALL823fe4f97f387/RcppParallel/src/tbb/build-tbb/CMakeFiles/CMakeScratch/TryCompile-WER5i1'
+    
+    
+
+
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:56 (project)
+
+
+-- Configuring incomplete, errors occurred!
+Error in useBundledTbb() : error configuring tbb (status code 1)
+In addition: Warning message:
+In system2(cmake, shQuote(cmakeFlags), stdout = TRUE, stderr = TRUE) :
+  running command ''/usr/bin/cmake' '-DCMAKE_C_COMPILER=gcc' '-DCMAKE_CXX_COMPILER=g++' '-DCMAKE_C_FLAGS=-I/usr/local/include -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects ' '-DCMAKE_CXX_FLAGS=-I/usr/local/include -std=gnu++20 -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  ' '-DTBB_DISABLE_HWLOC_AUTOMATIC_SEARCH=1' '-DTBB_TEST=0' '-DTBB_EXAMPLES=0' '-DTBB_STRICT=0' '..' 2>&1' had status 1
+Execution halted
+make[1]: *** [Makevars:29: tbb] Error 1
+make[1]: Leaving directory '/tmp/RtmpuHXYNF/R.INSTALL823fe4f97f387/RcppParallel/src'
+ERROR: compilation failed for package ‘RcppParallel’
+* removing ‘/home/theo/cuplr/scratchpad/benchmarks/rlib/RcppParallel’
+
+The downloaded source packages are in
+	‘/tmp/RtmpeSnILe/downloaded_packages’
+== installing runstats (CRAN Archive)
+trying URL 'https://cloud.r-project.org/src/contrib/Archive/runstats/runstats_1.1.0.tar.gz'
+Content type 'application/x-gzip' length 3904589 bytes (3.7 MB)
+==================================================
+downloaded 3.7 MB
+
+ERROR: dependency ‘fftwtools’ is not available for package ‘runstats’
+Perhaps try a variation of:
+install.packages('fftwtools')
+* removing ‘/home/theo/cuplr/scratchpad/benchmarks/rlib/runstats’
+== installing RollingWindow (GitHub master tarball)
+trying URL 'https://github.com/andrewuhl/RollingWindow/archive/refs/heads/master.tar.gz'
+Content type 'application/x-gzip' length 36737 bytes (35 KB)
+==================================================
+downloaded 35 KB
+
+Warning in untar2(tarfile, files, list, exdir, restore_times, allow_all) :
+  skipping pax global extended headers
+* installing *source* package ‘RollingWindow’ ...
+** this is package ‘RollingWindow’ version ‘0.2’
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 16.2.1 20260810’
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c RollingWindow.cpp -o RollingWindow.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c expanding_median.cpp -o expanding_median.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c rolling_median.cpp -o rolling_median.o
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_NaSub(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:40:17: error: format not a string literal and no format arguments [-Werror=format-security]
+   40 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingBeta(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:75:17: error: format not a string literal and no format arguments [-Werror=format-security]
+   75 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingCompound(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:109:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  109 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingCov(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:144:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  144 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingCorr(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:179:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  179 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingKurt(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:213:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  213 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingMax(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:246:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  246 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingMean(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:279:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  279 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingMAE(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:313:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  313 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingMS(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:346:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  346 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingMSE(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:380:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  380 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingMedian(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:413:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  413 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingMin(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:446:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  446 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingProd(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:479:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  479 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingRMSE(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:513:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  513 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingSkew(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:547:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  547 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingStd(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:581:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  581 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingSum(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:614:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  614 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingSumprod(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:648:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  648 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingSS(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:681:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  681 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingSSE(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:715:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  715 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingVar(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:749:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  749 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingZscore(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:783:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  783 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingSharpe(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:818:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  818 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+cc1plus: some warnings being treated as errors
+make: *** [/usr/lib64/R/etc/Makeconf:199: RcppExports.o] Error 1
+make: *** Waiting for unfinished jobs....
+ERROR: compilation failed for package ‘RollingWindow’
+* removing ‘/home/theo/cuplr/scratchpad/benchmarks/rlib/RollingWindow’
+
+==== install summary (LIB = /home/theo/cuplr/scratchpad/benchmarks/rlib) ====
+        package version                  status
+           roll    <NA> not run: install failed
+         slider   0.3.3                      ok
+       RcppRoll   0.4.0                      ok
+            zoo   1.9.1                      ok
+         runner   0.4.6                      ok
+ microbenchmark   1.5.0                      ok
+         ggdist   3.3.3                      ok
+      paletteer   1.7.0                      ok
+         ggtext   0.2.0                      ok
+     data.table  1.18.4                      ok
+        ggplot2   4.0.3                      ok
+         scales   1.4.0                      ok
+      patchwork   1.3.2                      ok
+       runstats    <NA> not run: install failed
+  RollingWindow    <NA> not run: install failed
+                                                                     note
+ not loadable; installation of 2 packages failed:  ‘RcppParallel’, ‘roll’
+                                                        already installed
+                                                        already installed
+                                                        already installed
+                                                        already installed
+                                                        already installed
+                                                        already installed
+                                                        already installed
+                                                        already installed
+                                                        already installed
+                                                        already installed
+                                                        already installed
+                                                        already installed
+                                               installed but not loadable
+                                               installed but not loadable
+Warning messages:
+1: In install.packages(paste0(base, newest), lib = LIB, repos = NULL,  :
+  installation of package ‘/tmp/RtmpeSnILe/downloaded_packages/runstats_1.1.0.tar.gz’ had non-zero exit status
+2: In install.packages("https://github.com/andrewuhl/RollingWindow/archive/refs/heads/master.tar.gz",  :
+  installation of package ‘/tmp/RtmpeSnILe/downloaded_packages/master.tar.gz’ had non-zero exit status
+
+real	0m7.127s
+user	0m7.506s
+sys	0m0.853s

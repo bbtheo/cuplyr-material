@@ -1,0 +1,8 @@
+"table","rows","path","bytes","row_groups","codec","columns","row_group_max_rows"
+"narrow",1000000,"/home/theo/cuplr/scratchpad/benchmarks/parquet-pipeline/data/fact-narrow-1000000.parquet",7760901,1,"SNAPPY",8,1e+06
+"wide",1000000,"/home/theo/cuplr/scratchpad/benchmarks/parquet-pipeline/data/fact-wide-1000000.parquet",35961942,1,"SNAPPY",40,1e+06
+"narrow",10000000,"/home/theo/cuplr/scratchpad/benchmarks/parquet-pipeline/data/fact-narrow-10000000.parquet",77466882,10,"SNAPPY",8,1048576
+"wide",10000000,"/home/theo/cuplr/scratchpad/benchmarks/parquet-pipeline/data/fact-wide-10000000.parquet",359471337,10,"SNAPPY",40,1048576
+"narrow",100000000,"/home/theo/cuplr/scratchpad/benchmarks/parquet-pipeline/data/fact-narrow-100000000.parquet",773403987,96,"SNAPPY",8,1048576
+"wide",100000000,"/home/theo/cuplr/scratchpad/benchmarks/parquet-pipeline/data/fact-wide-100000000.parquet",3593366659,96,"SNAPPY",40,1048576
+"wide",100000,"/home/theo/cuplr/scratchpad/benchmarks/parquet-pipeline/data/fact-wide-100000.parquet",3864386,1,"SNAPPY",40,1e+05

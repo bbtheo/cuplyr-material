@@ -1,0 +1,2 @@
+"key","code_key","render_start","render_end","start_epoch","end_epoch","chunk_starts","knit_secs","timing_secs","total_secs"
+"fcba07be4cc08c90e66e168b88810e5c","485d54006c2a89e4c51a6907d87b6ac9","2026-10-26 20:35:04","2026-10-26 20:55:26",1793039704.692,1793040926.691,"bench-main=1793039705.616;bench-overhead=1793040509.921;bench-ext=1793040539.279;bench-engines=1793040578.844;bench-memory=1793040894.888;bench-fence=1793040896.315;bench-runstats-shift=1793040898.372;bench-cores=1793040906.324",1221.99846601486,1215.548,1226.731

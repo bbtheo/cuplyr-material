@@ -1,0 +1,4 @@
+"form","rows","native","reason","columns_read","rows_read"
+"cuplyr_rowwise",100000,TRUE,,"category,x17,x18,x19,x20",1e+05
+"cuplyr_rowwise",1000000,TRUE,,"category,x17,x18,x19,x20",1e+06
+"cuplyr_rowwise",10000000,TRUE,"","category,x17,x18,x19,x20",1e+07

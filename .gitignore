@@ -1,0 +1,25 @@
+# Generated benchmark inputs (several GB; regenerate with the cuplyr bench driver)
+benchmarks/parquet-pipeline/data/
+benchmarks/parquet-pipeline/probe-data/
+benchmarks/parquet-pipeline/test-tmp/
+benchmarks/parquet-pipeline/reference/
+benchmarks/parquet-pipeline/trial-*/
+*.parquet
+*.rds
+
+# Private R library for the benchmarks (1.3 GB of installed packages)
+benchmarks/rlib/
+
+# Render caches
+benchmarks/*/cache/
+*_cache/
+*_files/
+.quarto/
+
+# Editors and OS
+.Rhistory
+.RData
+.Rproj.user/
+.DS_Store
+*.swp
+__pycache__/

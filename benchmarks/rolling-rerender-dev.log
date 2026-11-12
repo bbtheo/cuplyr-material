@@ -1,0 +1,389 @@
+[gpu-run] lock acquired after 0s (r)
+cuplyr: GPU-accelerated data manipulation
+GPU: NVIDIA GeForce RTX 5070 (12.0)
+Memory: 11.7 GB free / 12.4 GB total
+quarto render /home/theo/cuplr-wt/_integration/bench/rolling-window.qmd -P root:/home/theo/cuplr-wt/_integration --output-dir /tmp/RtmpPaPUO2/rolling-html-c4fd86e2e4754
+[31m
+
+processing file: rolling-window.qmd
+[39m1/65                       
+2/65 [setup]               
+3/65                       
+4/65 [bench-main]          
+[31m20:21:24 == statistic: mean
+[39m[31m20:21:24   width 11
+[39m[31m20:21:24     data.table
+[39m[31m20:21:25     data.table (1 thread)
+[39m[31m20:21:28     roll
+[39m[31m20:21:30     roll (1 thread)
+[39m[31m20:21:32     RollingWindow
+[39m[31m20:21:35     runstats
+[39m[31m20:21:36     slider
+[39m[31m20:21:38     RcppRoll
+[39m[31m20:21:39     RcppRoll (1 thread)
+[39m[31m20:21:41     zoo
+[39m[31m20:21:45     runner
+[39m[31m20:21:52     cuplyr
+[39m[31m20:21:54     cuplyr (froll alias)
+[39m[31m20:21:55   width 101
+[39m[31m20:21:55     data.table
+[39m[31m20:21:56     data.table (1 thread)
+[39m[31m20:21:57     roll
+[39m[31m20:21:59     roll (1 thread)
+[39m[31m20:22:00     RollingWindow
+[39m[31m20:22:01     runstats
+[39m[31m20:22:03     slider
+[39m[31m20:22:05     RcppRoll
+[39m[31m20:22:06     RcppRoll (1 thread)
+[39m[31m20:22:08     zoo
+[39m[31m20:22:12     runner
+[39m[31m20:22:31     cuplyr
+[39m[31m20:22:32     cuplyr (froll alias)
+[39m[31m20:22:33   width 1001
+[39m[31m20:22:33     data.table
+[39m[31m20:22:34     data.table (1 thread)
+[39m[31m20:22:36     roll
+[39m[31m20:22:37     roll (1 thread)
+[39m[31m20:22:38     RollingWindow
+[39m[31m20:22:40     runstats
+[39m[31m20:22:41     slider
+[39m[31m20:22:44     RcppRoll
+[39m[31m20:22:45     RcppRoll (1 thread)
+[39m[31m20:22:47     zoo
+[39m[31m20:22:51     runner
+[39m[31m20:23:20     cuplyr
+[39m[31m20:23:21     cuplyr (froll alias)
+[39m[31m20:23:23 == statistic: median
+20:23:23   width 11
+[39m[31m20:23:23     data.table
+[39m[31m20:23:24     data.table (1 thread)
+[39m[31m20:23:26     RcppRoll
+[39m[31m20:23:27     RcppRoll (1 thread)
+[39m[31m20:23:29     roll
+[39m[31m20:23:34     roll (1 thread)
+[39m[31m20:23:38     RollingWindow
+[39m[31m20:23:40     zoo
+[39m[31m20:23:44     cuplyr: not timed (CPU fallback)
+[39m[31m20:23:44   width 101
+[39m[31m20:23:44     data.table
+[39m[31m20:23:46     data.table (1 thread)
+[39m[31m20:23:48     RcppRoll
+[39m[31m20:23:49     RcppRoll (1 thread)
+[39m[31m20:23:52     roll
+[39m[31m20:23:58     roll (1 thread)
+[39m[31m20:24:03     RollingWindow
+[39m[31m20:24:06     zoo
+[39m[31m20:24:10     cuplyr: not timed (CPU fallback)
+[39m[31m20:24:10   width 1001
+[39m[31m20:24:10     data.table
+[39m[31m20:24:12     data.table (1 thread)
+[39m[31m20:24:15     RcppRoll
+[39m[31m20:24:16     RcppRoll (1 thread)
+[39m[31m20:24:19     roll
+[39m[31m20:24:27     roll (1 thread)
+[39m[31m20:24:34     RollingWindow
+[39m[31m20:24:37     zoo
+[39m[31m20:24:42     cuplyr: not timed (CPU fallback)
+[39m[31m20:24:42 == statistic: min
+20:24:42   width 11
+[39m[31m20:24:42     data.table
+[39m[31m20:24:43     data.table (1 thread)
+[39m[31m20:24:44     RcppRoll
+[39m[31m20:24:46     RcppRoll (1 thread)
+[39m[31m20:24:47     roll
+[39m[31m20:24:48     roll (1 thread)
+[39m[31m20:24:50     RollingWindow
+[39m[31m20:24:51     slider
+[39m[31m20:24:53     runner
+[39m[31m20:25:00     cuplyr
+[39m[31m20:25:01     cuplyr (froll alias)
+[39m[31m20:25:02   width 101
+[39m[31m20:25:02     data.table
+[39m[31m20:25:04     data.table (1 thread)
+[39m[31m20:25:05     RcppRoll
+[39m[31m20:25:06     RcppRoll (1 thread)
+[39m[31m20:25:07     roll
+[39m[31m20:25:09     roll (1 thread)
+[39m[31m20:25:10     RollingWindow
+[39m[31m20:25:12     slider
+[39m[31m20:25:14     runner
+[39m[31m20:25:26     cuplyr
+[39m[31m20:25:27     cuplyr (froll alias)
+[39m[31m20:25:28   width 1001
+[39m[31m20:25:28     data.table
+[39m[31m20:25:30     data.table (1 thread)
+[39m[31m20:25:31     RcppRoll
+[39m[31m20:25:32     RcppRoll (1 thread)
+[39m[31m20:25:33     roll
+[39m[31m20:25:35     roll (1 thread)
+[39m[31m20:25:36     RollingWindow
+[39m[31m20:25:38     slider
+[39m[31m20:25:41     runner
+[39m[31m20:26:09     cuplyr
+[39m[31m20:26:10     cuplyr (froll alias)
+[39m[31m20:26:11 == statistic: max
+20:26:11   width 11
+[39m[31m20:26:11     data.table
+[39m[31m20:26:12     data.table (1 thread)
+[39m[31m20:26:14     RcppRoll
+[39m[31m20:26:15     RcppRoll (1 thread)
+[39m[31m20:26:16     roll
+[39m[31m20:26:18     roll (1 thread)
+[39m[31m20:26:19     RollingWindow
+[39m[31m20:26:21     slider
+[39m[31m20:26:22     runner
+[39m[31m20:26:29     zoo
+[39m[31m20:26:42     cuplyr
+[39m[31m20:26:43     cuplyr (froll alias)
+[39m[31m20:26:44   width 101
+[39m[31m20:26:44     data.table
+[39m[31m20:26:45     data.table (1 thread)
+[39m[31m20:26:47     RcppRoll
+[39m[31m20:26:48     RcppRoll (1 thread)
+[39m[31m20:26:49     roll
+[39m[31m20:26:51     roll (1 thread)
+[39m[31m20:26:52     RollingWindow
+[39m[31m20:26:54     slider
+[39m[31m20:26:56     runner
+[39m[31m20:27:08     zoo
+[39m[31m20:27:20     cuplyr
+[39m[31m20:27:21     cuplyr (froll alias)
+[39m[31m20:27:23   width 1001
+[39m[31m20:27:23     data.table
+[39m[31m20:27:24     data.table (1 thread)
+[39m[31m20:27:25     RcppRoll
+[39m[31m20:27:26     RcppRoll (1 thread)
+[39m[31m20:27:28     roll
+[39m[31m20:27:29     roll (1 thread)
+[39m[31m20:27:31     RollingWindow
+[39m[31m20:27:32     slider
+[39m[31m20:27:35     runner
+[39m[31m20:28:02     zoo
+[39m[31m20:28:14     cuplyr
+[39m[31m20:28:16     cuplyr (froll alias)
+[39m[31m20:28:17 == statistic: sum
+20:28:17   width 11
+[39m[31m20:28:17     data.table
+[39m[31m20:28:18     data.table (1 thread)
+[39m[31m20:28:19     data.table (exact)
+[39m[31m20:28:21     data.table (exact, 1 thread)
+[39m[31m20:28:22     RcppRoll
+[39m[31m20:28:23     RcppRoll (1 thread)
+[39m[31m20:28:24     roll
+[39m[31m20:28:26     roll (1 thread)
+[39m[31m20:28:27     RollingWindow
+[39m[31m20:28:28     runner
+[39m[31m20:28:36     slider
+[39m[31m20:28:38     zoo
+[39m[31m20:28:41     cuplyr
+[39m[31m20:28:43     cuplyr (froll alias)
+[39m[31m20:28:44   width 101
+[39m[31m20:28:44     data.table
+[39m[31m20:28:45     data.table (1 thread)
+[39m[31m20:28:46     data.table (exact)
+[39m[31m20:28:48     data.table (exact, 1 thread)
+[39m[31m20:28:50     RcppRoll
+[39m[31m20:28:51     RcppRoll (1 thread)
+[39m[31m20:28:52     roll
+[39m[31m20:28:54     roll (1 thread)
+[39m[31m20:28:55     RollingWindow
+[39m[31m20:28:56     runner
+[39m[31m20:29:17     slider
+[39m[31m20:29:19     zoo
+[39m[31m20:29:23     cuplyr
+[39m[31m20:29:24     cuplyr (froll alias)
+[39m[31m20:29:25   width 1001
+[39m[31m20:29:25     data.table
+[39m[31m20:29:27     data.table (1 thread)
+[39m[31m20:29:28     data.table (exact)
+[39m[31m20:29:30     data.table (exact, 1 thread)
+[39m[31m20:29:45     RcppRoll
+[39m[31m20:29:46     RcppRoll (1 thread)
+[39m[31m20:29:47     roll
+[39m[31m20:29:49     roll (1 thread)
+[39m[31m20:29:50     RollingWindow
+[39m[31m20:29:51     runner
+[39m[31m20:30:23     slider
+[39m[31m20:30:26     zoo
+[39m[31m20:30:30     cuplyr
+[39m[31m20:30:32     cuplyr (froll alias)
+[39m[31m20:30:33 == statistic: sd
+20:30:33   width 11
+[39m[31m20:30:33     data.table
+[39m[31m20:30:35     data.table (1 thread)
+[39m[31m20:30:36     RcppRoll
+[39m[31m20:30:37     RcppRoll (1 thread)
+[39m[31m20:30:39     roll
+[39m[31m20:30:40     roll (1 thread)
+[39m[31m20:30:42     RollingWindow
+[39m[31m20:30:44     runstats
+[39m[31m20:30:46     cuplyr
+[39m[31m20:30:47     cuplyr (froll alias)
+[39m[31m20:30:48   width 101
+[39m[31m20:30:48     data.table
+[39m[31m20:30:50     data.table (1 thread)
+[39m[31m20:30:51     RcppRoll
+[39m[31m20:30:52     RcppRoll (1 thread)
+[39m[31m20:30:54     roll
+[39m[31m20:30:55     roll (1 thread)
+[39m[31m20:30:57     RollingWindow
+[39m[31m20:30:58     runstats
+[39m[31m20:31:00     cuplyr
+[39m[31m20:31:01     cuplyr (froll alias)
+[39m[31m20:31:03   width 1001
+[39m[31m20:31:03     data.table
+[39m[31m20:31:04     data.table (1 thread)
+[39m[31m20:31:06     RcppRoll
+[39m[31m20:31:07     RcppRoll (1 thread)
+[39m[31m20:31:08     roll
+[39m[31m20:31:10     roll (1 thread)
+[39m[31m20:31:12     RollingWindow
+[39m[31m20:31:13     runstats
+[39m[31m20:31:15     cuplyr
+[39m[31m20:31:17     cuplyr (froll alias)
+[39m[31m20:31:20 == statistic: custom
+20:31:20   width 11
+[39m[31m20:31:20     data.table::frollapply
+[39m[31m20:31:30     data.table::frollapply (1 thread)
+[39m[31m20:31:48     zoo::rollapply
+[39m[31m20:32:16   width 101
+[39m[31m20:32:16     data.table::frollapply
+[39m[31m20:32:26     data.table::frollapply (1 thread)
+[39m[31m20:32:44     zoo::rollapply
+[39m[31m20:33:10   width 1001
+[39m[31m20:33:10     data.table::frollapply
+[39m[31m20:33:21     data.table::frollapply (1 thread)
+[39m[31m20:33:44     zoo::rollapply
+[39m5/65                       
+6/65 [bench-overhead]      
+[31m20:34:23 == overhead floor: mean
+[39m[31m20:34:26 == overhead floor: min
+[39m[31m20:34:29 == overhead floor: max
+[39m[31m20:34:32 == overhead floor: sum
+[39m[31m20:34:35 == overhead floor: sd
+[39m[31m20:34:38 == overhead: plain mutate(y = x + 1) on 1000 rows
+[39m[31m20:34:40 == overhead: window mutate(r = roll_mean(x, 101)) on 1000 rows
+[39m[31m20:34:43 == overhead: window mutate(r = cumsum(x)) on 1000 rows
+[39m[31m20:34:46 == overhead: plain mutate(y = x + 1) on 1e+06 rows
+[39m[31m20:34:47 == overhead: window mutate(r = roll_mean(x, 101)) on 1e+06 rows
+[39m[31m20:34:49 == overhead: window mutate(r = cumsum(x)) on 1e+06 rows
+[39m7/65                       
+8/65 [bench-ext]           
+[31m20:34:50 == extension (a): grouped
+[39m[31m20:34:50     cuplyr
+[39m[31m20:34:51     data.table
+[39m[31m20:34:52     data.table (1 thread)
+[39m[31m20:34:53     slider
+[39m[31m20:34:55 == extension (b): ungrouped
+[39m[31m20:34:55     cuplyr width 11
+[39m[31m20:34:56     data.table width 11
+[39m[31m20:34:58     data.table (1 thread) width 11
+[39m[31m20:34:59     roll width 11
+[39m[31m20:35:01     roll (1 thread) width 11
+[39m[31m20:35:02     RcppRoll width 11
+[39m[31m20:35:04     RcppRoll (1 thread) width 11
+[39m[31m20:35:05     cuplyr width 101
+[39m[31m20:35:07     data.table width 101
+[39m[31m20:35:08     data.table (1 thread) width 101
+[39m[31m20:35:09     roll width 101
+[39m[31m20:35:11     roll (1 thread) width 101
+[39m[31m20:35:13     RcppRoll width 101
+[39m[31m20:35:14     RcppRoll (1 thread) width 101
+[39m[31m20:35:16     cuplyr width 1001
+[39m[31m20:35:19     data.table width 1001
+[39m[31m20:35:20     data.table (1 thread) width 1001
+[39m[31m20:35:21     roll width 1001
+[39m[31m20:35:23     roll (1 thread) width 1001
+[39m[31m20:35:25     RcppRoll width 1001
+[39m[31m20:35:26     RcppRoll (1 thread) width 1001
+[39m9/65                       
+10/65 [bench-memory]        
+[31m20:35:28 == memory: window mutate(r = roll_mean(x, 101))
+[39m[31m20:35:29 == memory: plain mutate(y = x + 1)
+[39m[31m20:35:29 == memory: window mutate(r = cumsum(x))
+[39m[31m20:35:29 == memory: 20 back-to-back calls without gc()
+[39m11/65                       
+12/65 [bench-fence]         
+[31m20:35:30 == fence on / off
+[39m13/65                       
+14/65 [bench-runstats-shift]
+[31m20:35:31 == runstats mean: shift outside / inside timing, interleaved
+[39m[31m20:35:34 == runstats sd: shift outside / inside timing, interleaved
+[39m15/65                       
+16/65 [bench-cores]         
+[31m20:35:38 == core placement: fast cpu 15
+[39m[31m20:35:39 == core placement: slow cpu 23
+[39m17/65                       
+18/65 [data]                
+19/65                       
+20/65 [hardware]            
+21/65                       
+22/65 [helpers]             
+23/65                       
+24/65 [source-lines]        
+25/65                       
+26/65 [claims]              
+27/65                       
+28/65 [csv]                 
+29/65                       
+30/65 [plots]               
+31/65                       
+32/65 [skipped-table]       
+33/65                       
+34/65 [threads-table]       
+35/65                       
+36/65 [versions-table]      
+37/65                       
+38/65 [install-table]       
+39/65                       
+40/65 [results-mean]        
+41/65                       
+42/65 [results-median]      
+43/65                       
+44/65 [results-min]         
+45/65                       
+46/65 [results-max]         
+47/65                       
+48/65 [results-sum]         
+49/65                       
+50/65 [results-sd]          
+51/65                       
+52/65 [results-custom]      
+53/65                       
+54/65 [cuts-table]          
+55/65                       
+56/65 [correctness-bad]     
+57/65                       
+58/65 [extension-table]     
+59/65                       
+60/65 [extension-plot]      
+61/65                       
+62/65 [overhead-table]      
+63/65                       
+64/65 [memory-table]        
+65/65                       
+[31moutput file: rolling-window.knit.md
+
+[39m[1mpandoc [22m
+  to: html
+  output-file: rolling-window.html
+  standalone: true
+  embed-resources: true
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  title: Rolling-window benchmark, redone with cuplyr
+  
+Output created: ../../../../../tmp/RtmpPaPUO2/rolling-html-c4fd86e2e4754/rolling-window.html
+
+wrote /home/theo/cuplr/scratchpad/benchmarks/rolling/rolling-window.html

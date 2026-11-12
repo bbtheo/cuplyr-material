@@ -1,0 +1,49 @@
+"variant","table","rows","source","plan","columns_read","predicates","rows_read","row_groups_total","row_groups_after_stats","rows_decoded"
+"p1_push","narrow",1000000,"fact-narrow-1000000.parquet","pipeline","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",190194,1,1,1e+06
+"p1_nopush","narrow",1000000,"fact-narrow-1000000.parquet","pipeline","store,qty,price,discount,channel","",1e+06,1,,1e+06
+"p2_push","narrow",1000000,"stores.parquet","pipeline","store,region","",1000,1,,
+"p2_push","narrow",1000000,"fact-narrow-1000000.parquet","fact scan under the join","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",190194,1,1,1e+06
+"p2_nopush","narrow",1000000,"stores.parquet","pipeline","store,region","",1000,1,,
+"p2_nopush","narrow",1000000,"fact-narrow-1000000.parquet","fact scan under the join","store,qty,price,discount,channel","",1e+06,1,,1e+06
+"p3_push","narrow",1000000,"fact-narrow-1000000.parquet","pipeline","day,product,qty,price,discount","day >= 2024-01-01 & qty >= 2",190194,1,1,1e+06
+"p3_nopush","narrow",1000000,"fact-narrow-1000000.parquet","pipeline","product,qty,price,discount,channel","",1e+06,1,,1e+06
+"p1_push","wide",1000000,"fact-wide-1000000.parquet","pipeline","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",190194,1,1,1e+06
+"p1_nopush","wide",1000000,"fact-wide-1000000.parquet","pipeline","store,qty,price,discount,channel","",1e+06,1,,1e+06
+"p2_push","wide",1000000,"stores.parquet","pipeline","store,region","",1000,1,,
+"p2_push","wide",1000000,"fact-wide-1000000.parquet","fact scan under the join","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",190194,1,1,1e+06
+"p2_nopush","wide",1000000,"stores.parquet","pipeline","store,region","",1000,1,,
+"p2_nopush","wide",1000000,"fact-wide-1000000.parquet","fact scan under the join","store,qty,price,discount,channel","",1e+06,1,,1e+06
+"p3_push","wide",1000000,"fact-wide-1000000.parquet","pipeline","day,product,qty,price,discount","day >= 2024-01-01 & qty >= 2",190194,1,1,1e+06
+"p3_nopush","wide",1000000,"fact-wide-1000000.parquet","pipeline","product,qty,price,discount,channel","",1e+06,1,,1e+06
+"p1_push","narrow",10000000,"fact-narrow-10000000.parquet","pipeline","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",1903250,10,3,2659968
+"p1_nopush","narrow",10000000,"fact-narrow-10000000.parquet","pipeline","store,qty,price,discount,channel","",1e+07,10,,1e+07
+"p2_push","narrow",10000000,"stores.parquet","pipeline","store,region","",1000,1,,
+"p2_push","narrow",10000000,"fact-narrow-10000000.parquet","fact scan under the join","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",1903250,10,3,2659968
+"p2_nopush","narrow",10000000,"stores.parquet","pipeline","store,region","",1000,1,,
+"p2_nopush","narrow",10000000,"fact-narrow-10000000.parquet","fact scan under the join","store,qty,price,discount,channel","",1e+07,10,,1e+07
+"p3_push","narrow",10000000,"fact-narrow-10000000.parquet","pipeline","day,product,qty,price,discount","day >= 2024-01-01 & qty >= 2",1903250,10,3,2659968
+"p3_nopush","narrow",10000000,"fact-narrow-10000000.parquet","pipeline","product,qty,price,discount,channel","",1e+07,10,,1e+07
+"p1_push","wide",10000000,"fact-wide-10000000.parquet","pipeline","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",1903250,10,3,2659968
+"p1_nopush","wide",10000000,"fact-wide-10000000.parquet","pipeline","store,qty,price,discount,channel","",1e+07,10,,1e+07
+"p2_push","wide",10000000,"stores.parquet","pipeline","store,region","",1000,1,,
+"p2_push","wide",10000000,"fact-wide-10000000.parquet","fact scan under the join","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",1903250,10,3,2659968
+"p2_nopush","wide",10000000,"stores.parquet","pipeline","store,region","",1000,1,,
+"p2_nopush","wide",10000000,"fact-wide-10000000.parquet","fact scan under the join","store,qty,price,discount,channel","",1e+07,10,,1e+07
+"p3_push","wide",10000000,"fact-wide-10000000.parquet","pipeline","day,product,qty,price,discount","day >= 2024-01-01 & qty >= 2",1903250,10,3,2659968
+"p3_nopush","wide",10000000,"fact-wide-10000000.parquet","pipeline","product,qty,price,discount,channel","",1e+07,10,,1e+07
+"p1_push","narrow",100000000,"fact-narrow-100000000.parquet","pipeline","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",19030712,96,20,20308224
+"p1_nopush","narrow",100000000,"fact-narrow-100000000.parquet","pipeline","store,qty,price,discount,channel","",1e+08,96,,1e+08
+"p2_push","narrow",100000000,"stores.parquet","pipeline","store,region","",1000,1,,
+"p2_push","narrow",100000000,"fact-narrow-100000000.parquet","fact scan under the join","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",19030712,96,20,20308224
+"p2_nopush","narrow",100000000,"stores.parquet","pipeline","store,region","",1000,1,,
+"p2_nopush","narrow",100000000,"fact-narrow-100000000.parquet","fact scan under the join","store,qty,price,discount,channel","",1e+08,96,,1e+08
+"p3_push","narrow",100000000,"fact-narrow-100000000.parquet","pipeline","day,product,qty,price,discount","day >= 2024-01-01 & qty >= 2",19030712,96,20,20308224
+"p3_nopush","narrow",100000000,"fact-narrow-100000000.parquet","pipeline","product,qty,price,discount,channel","",1e+08,96,,1e+08
+"p1_push","wide",100000000,"fact-wide-100000000.parquet","pipeline","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",19030712,96,20,20308224
+"p1_nopush","wide",100000000,"fact-wide-100000000.parquet","pipeline","store,qty,price,discount,channel","",1e+08,96,,1e+08
+"p2_push","wide",100000000,"stores.parquet","pipeline","store,region","",1000,1,,
+"p2_push","wide",100000000,"fact-wide-100000000.parquet","fact scan under the join","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",19030712,96,20,20308224
+"p2_nopush","wide",100000000,"stores.parquet","pipeline","store,region","",1000,1,,
+"p2_nopush","wide",100000000,"fact-wide-100000000.parquet","fact scan under the join","store,qty,price,discount,channel","",1e+08,96,,1e+08
+"p3_push","wide",100000000,"fact-wide-100000000.parquet","pipeline","day,product,qty,price,discount","day >= 2024-01-01 & qty >= 2",19030712,96,20,20308224
+"p3_nopush","wide",100000000,"fact-wide-100000000.parquet","pipeline","product,qty,price,discount,channel","",1e+08,96,,1e+08

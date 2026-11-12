@@ -1,0 +1,37 @@
+"variant","table","rows","source","columns_read","predicates","rows_read","row_groups_total","row_groups_after_stats"
+"p1_push","narrow",10000000,"fact-narrow-10000000.parquet","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",1903250,10,3
+"p1_nopush","narrow",10000000,"fact-narrow-10000000.parquet","store,qty,price,discount,channel","",1e+07,10,
+"p2_push","narrow",10000000,"stores.parquet","store,region","",1000,1,
+"p2_nopush","narrow",10000000,"stores.parquet","store,region","",1000,1,
+"p3_push","narrow",10000000,"fact-narrow-10000000.parquet","day,product,qty,price,discount","day >= 2024-01-01 & qty >= 2",1903250,10,3
+"p3_nopush","narrow",10000000,"fact-narrow-10000000.parquet","product,qty,price,discount,channel","",1e+07,10,
+"p1_push","wide",10000000,"fact-wide-10000000.parquet","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",1903250,10,3
+"p1_nopush","wide",10000000,"fact-wide-10000000.parquet","store,qty,price,discount,channel","",1e+07,10,
+"p2_push","wide",10000000,"stores.parquet","store,region","",1000,1,
+"p2_nopush","wide",10000000,"stores.parquet","store,region","",1000,1,
+"p3_push","wide",10000000,"fact-wide-10000000.parquet","day,product,qty,price,discount","day >= 2024-01-01 & qty >= 2",1903250,10,3
+"p3_nopush","wide",10000000,"fact-wide-10000000.parquet","product,qty,price,discount,channel","",1e+07,10,
+"p1_push","narrow",100000000,"fact-narrow-100000000.parquet","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",19030712,96,20
+"p1_nopush","narrow",100000000,"fact-narrow-100000000.parquet","store,qty,price,discount,channel","",1e+08,96,
+"p2_push","narrow",100000000,"stores.parquet","store,region","",1000,1,
+"p2_nopush","narrow",100000000,"stores.parquet","store,region","",1000,1,
+"p3_push","narrow",100000000,"fact-narrow-100000000.parquet","day,product,qty,price,discount","day >= 2024-01-01 & qty >= 2",19030712,96,20
+"p3_nopush","narrow",100000000,"fact-narrow-100000000.parquet","product,qty,price,discount,channel","",1e+08,96,
+"p1_push","wide",100000000,"fact-wide-100000000.parquet","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",19030712,96,20
+"p1_nopush","wide",100000000,"fact-wide-100000000.parquet","store,qty,price,discount,channel","",1e+08,96,
+"p2_push","wide",100000000,"stores.parquet","store,region","",1000,1,
+"p2_nopush","wide",100000000,"stores.parquet","store,region","",1000,1,
+"p3_push","wide",100000000,"fact-wide-100000000.parquet","day,product,qty,price,discount","day >= 2024-01-01 & qty >= 2",19030712,96,20
+"p3_nopush","wide",100000000,"fact-wide-100000000.parquet","product,qty,price,discount,channel","",1e+08,96,
+"p1_push","narrow",1000000,"fact-narrow-1000000.parquet","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",190194,1,1
+"p1_nopush","narrow",1000000,"fact-narrow-1000000.parquet","store,qty,price,discount,channel","",1e+06,1,
+"p2_push","narrow",1000000,"stores.parquet","store,region","",1000,1,
+"p2_nopush","narrow",1000000,"stores.parquet","store,region","",1000,1,
+"p3_push","narrow",1000000,"fact-narrow-1000000.parquet","day,product,qty,price,discount","day >= 2024-01-01 & qty >= 2",190194,1,1
+"p3_nopush","narrow",1000000,"fact-narrow-1000000.parquet","product,qty,price,discount,channel","",1e+06,1,
+"p1_push","wide",1000000,"fact-wide-1000000.parquet","day,store,qty,price,discount,channel","day >= 2024-01-01 & qty >= 2",190194,1,1
+"p1_nopush","wide",1000000,"fact-wide-1000000.parquet","store,qty,price,discount,channel","",1e+06,1,
+"p2_push","wide",1000000,"stores.parquet","store,region","",1000,1,
+"p2_nopush","wide",1000000,"stores.parquet","store,region","",1000,1,
+"p3_push","wide",1000000,"fact-wide-1000000.parquet","day,product,qty,price,discount","day >= 2024-01-01 & qty >= 2",190194,1,1
+"p3_nopush","wide",1000000,"fact-wide-1000000.parquet","product,qty,price,discount,channel","",1e+06,1,

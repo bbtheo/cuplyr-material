@@ -1,0 +1,295 @@
+[gpu-run] lock acquired after 0s (r)
+cuplyr: GPU-accelerated data manipulation
+GPU: NVIDIA GeForce RTX 5070 (12.0)
+Memory: 11.7 GB free / 12.4 GB total
+== installing RcppParallel
+trying URL 'https://cloud.r-project.org/src/contrib/RcppParallel_6.2.1.tar.gz'
+Content type 'application/x-gzip' length 761652 bytes (743 KB)
+==================================================
+downloaded 743 KB
+
+* installing *source* package ‘RcppParallel’ ...
+** this is package ‘RcppParallel’ version ‘6.2.1’
+** package ‘RcppParallel’ successfully unpacked and MD5 sums checked
+** using staged installation
+** preparing to configure package 'RcppParallel' ...
+*** configured file: 'R/tbb-autodetected.R.in' => 'R/tbb-autodetected.R'
+*** configured file: 'src/Makevars.in' => 'src/Makevars'
+** finished configure for package 'RcppParallel'
+** libs
+using C++ compiler: ‘g++ (GCC) 16.2.1 20260810’
+** copying tbb headers from '/usr/include'
+** applied mingw cpuid guard to '../inst/include/oneapi/tbb/detail/_machine.h'
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG -I../inst/include -I"/usr/include"  -I/usr/local/include   -DRCPP_PARALLEL_USE_TBB=1 -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c init.cpp -o init.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG -I../inst/include -I"/usr/include"  -I/usr/local/include   -DRCPP_PARALLEL_USE_TBB=1 -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c options.cpp -o options.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG -I../inst/include -I"/usr/include"  -I/usr/local/include   -DRCPP_PARALLEL_USE_TBB=1 -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c tbb.cpp -o tbb.o
+g++ -std=gnu++20 -shared -L/usr/lib64/R/lib -L/usr/lib -o RcppParallel.so init.o options.o tbb.o -Wl,-L/usr/lib -Wl,-rpath,/usr/lib -ltbb -ltbbmalloc -Wl,-rpath,$ORIGIN/../lib -L/usr/lib64/R/lib -lR
+installing via 'install.libs.R' to /home/theo/cuplr/scratchpad/benchmarks/rlib/00LOCK-RcppParallel/00new/RcppParallel
+** copying tbb runtime libraries from '/usr/lib' [libtbb.so.12.19, libtbbbind_2_5.so.3.19, libtbbmalloc.so.2.19, libtbbmalloc_proxy.so.2.19]
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (RcppParallel)
+
+The downloaded source packages are in
+	‘/tmp/RtmpW5jOP8/downloaded_packages’
+== installing roll
+trying URL 'https://cloud.r-project.org/src/contrib/roll_1.2.1.tar.gz'
+Content type 'application/x-gzip' length 127381 bytes (124 KB)
+==================================================
+downloaded 124 KB
+
+* installing *source* package ‘roll’ ...
+** this is package ‘roll’ version ‘1.2.1’
+** package ‘roll’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 16.2.1 20260810’
+using C++ compiler: ‘g++ (GCC) 16.2.1 20260810’
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I'/home/theo/cuplr/scratchpad/benchmarks/rlib/RcppArmadillo/include' -I'/home/theo/cuplr/scratchpad/benchmarks/rlib/RcppParallel/include' -I/usr/local/include   -I../inst/include/ -fopenmp  -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c RcppExports.cpp -o RcppExports.o
+gcc -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I'/home/theo/cuplr/scratchpad/benchmarks/rlib/RcppArmadillo/include' -I'/home/theo/cuplr/scratchpad/benchmarks/rlib/RcppParallel/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c init.c -o init.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I'/home/theo/cuplr/scratchpad/benchmarks/rlib/RcppArmadillo/include' -I'/home/theo/cuplr/scratchpad/benchmarks/rlib/RcppParallel/include' -I/usr/local/include   -I../inst/include/ -fopenmp  -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c roll.cpp -o roll.o
+g++ -std=gnu++20 -shared -L/usr/lib64/R/lib -L/usr/lib -o roll.so RcppExports.o init.o roll.o -fopenmp -llapack -lblas -lgfortran -lm -latomic_asneeded -lquadmath -L/usr/lib -Wl,-rpath,/usr/lib -ltbb -ltbbmalloc -L/usr/lib64/R/lib -lR
+installing to /home/theo/cuplr/scratchpad/benchmarks/rlib/00LOCK-roll/00new/roll/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (roll)
+
+The downloaded source packages are in
+	‘/tmp/RtmpW5jOP8/downloaded_packages’
+== installing runstats (CRAN Archive)
+trying URL 'https://cloud.r-project.org/src/contrib/fftwtools_0.9-11.tar.gz'
+Content type 'application/x-gzip' length 174321 bytes (170 KB)
+==================================================
+downloaded 170 KB
+
+* installing *source* package ‘fftwtools’ ...
+** this is package ‘fftwtools’ version ‘0.9-11’
+** package ‘fftwtools’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking for x86_64-conda-linux-gnu-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... /home/theo/cuplr/.pixi/envs/default/bin/x86_64-conda-linux-gnu-cpp
+checking for x86_64-conda-linux-gnu-gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking for pkg-config... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+
+fftwtools 0.9-10
+================
+
+compiler flags:  
+link argument:  -lfftw3 
+
+** libs
+using C compiler: ‘gcc (GCC) 16.2.1 20260810’
+gcc -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c fftwtools.c -o fftwtools.o
+gcc -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c fftwtools_init.c -o fftwtools_init.o
+gcc -shared -L/usr/lib64/R/lib -L/usr/lib -o fftwtools.so fftwtools.o fftwtools_init.o -lfftw3 -L/usr/lib64/R/lib -lR
+installing to /home/theo/cuplr/scratchpad/benchmarks/rlib/00LOCK-fftwtools/00new/fftwtools/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (fftwtools)
+
+The downloaded source packages are in
+	‘/tmp/RtmpW5jOP8/downloaded_packages’
+trying URL 'https://cloud.r-project.org/src/contrib/Archive/runstats/runstats_1.1.0.tar.gz'
+Content type 'application/x-gzip' length 3904589 bytes (3.7 MB)
+==================================================
+downloaded 3.7 MB
+
+* installing *source* package ‘runstats’ ...
+** this is package ‘runstats’ version ‘1.1.0’
+** package ‘runstats’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (runstats)
+== installing RollingWindow (GitHub master tarball)
+trying URL 'https://github.com/andrewuhl/RollingWindow/archive/refs/heads/master.tar.gz'
+Content type 'application/x-gzip' length 36737 bytes (35 KB)
+==================================================
+downloaded 35 KB
+
+Warning in untar2(tarfile, files, list, exdir, restore_times, allow_all) :
+  skipping pax global extended headers
+* installing *source* package ‘RollingWindow’ ...
+** this is package ‘RollingWindow’ version ‘0.2’
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 16.2.1 20260810’
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include   -Wno-error=format-security -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include   -Wno-error=format-security -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c RollingWindow.cpp -o RollingWindow.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include   -Wno-error=format-security -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c expanding_median.cpp -o expanding_median.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include   -Wno-error=format-security -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c rolling_median.cpp -o rolling_median.o
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_NaSub(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:40:17: error: format not a string literal and no format arguments [-Werror=format-security]
+   40 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingBeta(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:75:17: error: format not a string literal and no format arguments [-Werror=format-security]
+   75 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingCompound(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:109:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  109 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingCov(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:144:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  144 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingCorr(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:179:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  179 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingKurt(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:213:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  213 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingMax(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:246:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  246 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingMean(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:279:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  279 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingMAE(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:313:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  313 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingMS(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:346:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  346 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingMSE(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:380:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  380 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingMedian(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:413:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  413 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingMin(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:446:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  446 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingProd(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:479:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  479 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingRMSE(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:513:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  513 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingSkew(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:547:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  547 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingStd(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:581:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  581 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingSum(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:614:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  614 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingSumprod(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:648:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  648 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingSS(SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:681:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  681 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingSSE(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:715:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  715 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingVar(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:749:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  749 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingZscore(SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:783:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  783 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function ‘SEXPREC* RollingWindow_RollingSharpe(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP)’:
+RcppExports.cpp:818:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  818 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+cc1plus: some warnings being treated as errors
+make: *** [/usr/lib64/R/etc/Makeconf:199: RcppExports.o] Error 1
+make: *** Waiting for unfinished jobs....
+ERROR: compilation failed for package ‘RollingWindow’
+* removing ‘/home/theo/cuplr/scratchpad/benchmarks/rlib/RollingWindow’
+
+==== install summary (LIB = /home/theo/cuplr/scratchpad/benchmarks/rlib) ====
+        package version                  status                       note
+   RcppParallel   6.2.1                      ok                           
+           roll   1.2.1                      ok                           
+         slider   0.3.3                      ok          already installed
+       RcppRoll   0.4.0                      ok          already installed
+            zoo   1.9.1                      ok          already installed
+         runner   0.4.6                      ok          already installed
+ microbenchmark   1.5.0                      ok          already installed
+         ggdist   3.3.3                      ok          already installed
+      paletteer   1.7.0                      ok          already installed
+         ggtext   0.2.0                      ok          already installed
+     data.table  1.18.4                      ok          already installed
+        ggplot2   4.0.3                      ok          already installed
+         scales   1.4.0                      ok          already installed
+      patchwork   1.3.2                      ok          already installed
+       runstats   1.1.0                      ok      runstats_1.1.0.tar.gz
+  RollingWindow    <NA> not run: install failed installed but not loadable
+Warning message:
+In install.packages("https://github.com/andrewuhl/RollingWindow/archive/refs/heads/master.tar.gz",  :
+  installation of package ‘/tmp/RtmpW5jOP8/downloaded_packages/master.tar.gz’ had non-zero exit status
+
+real	0m26.223s
+user	0m35.757s
+sys	0m2.362s

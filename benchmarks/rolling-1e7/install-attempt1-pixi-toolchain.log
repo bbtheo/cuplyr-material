@@ -1,0 +1,738 @@
+[gpu-run] lock acquired after 0s (r)
+cuplyr: GPU-accelerated data manipulation
+GPU: NVIDIA GeForce RTX 5070 (12.0)
+Memory: 11.7 GB free / 12.4 GB total
+== installing roll
+also installing the dependencies ‘RcppParallel’, ‘RcppArmadillo’
+
+trying URL 'https://cloud.r-project.org/src/contrib/RcppParallel_6.2.1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/RcppArmadillo_15.6.2-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/roll_1.2.1.tar.gz'
+begin installing package ‘RcppParallel’
+begin installing package ‘RcppArmadillo’
+make: *** [Makefile:4: RcppParallel.ts] Error 1
+make: *** [Makefile:9: RcppArmadillo.ts] Error 1
+make: Target 'all' not remade because of errors.
+* installing *source* package ‘RcppParallel’ ...
+** this is package ‘RcppParallel’ version ‘6.2.1’
+** package ‘RcppParallel’ successfully unpacked and MD5 sums checked
+** using staged installation
+** preparing to configure package 'RcppParallel' ...
+*** configured file: 'R/tbb-autodetected.R.in' => 'R/tbb-autodetected.R'
+*** configured file: 'src/Makevars.in' => 'src/Makevars'
+** finished configure for package 'RcppParallel'
+** libs
+using C++ compiler: ‘g++ (conda-forge gcc 14.3.0-16) 14.3.0’
+make[1]: Entering directory '/tmp/Rtmp7ZZGyp/R.INSTALL80aa85d56ebf/RcppParallel/src'
+** copying tbb headers from 'tbb/include'
+** mingw cpuid guard already present in '../inst/include/oneapi/tbb/detail/_machine.h'
+*** configuring tbb
+CMake Warning (deprecated) at CMakeLists.txt:15 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- The CXX compiler identification is GNU 14.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - failed
+-- Check for working CXX compiler: /home/theo/cuplr/.pixi/envs/default/bin/g++
+-- Check for working CXX compiler: /home/theo/cuplr/.pixi/envs/default/bin/g++ - broken
+CMake Error at /usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:71 (message):
+  The C++ compiler
+
+    "/home/theo/cuplr/.pixi/envs/default/bin/g++"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/tmp/Rtmp7ZZGyp/R.INSTALL80aa85d56ebf/RcppParallel/src/tbb/build-tbb/CMakeFiles/CMakeScratch/TryCompile-E0rS9L'
+    
+    Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1dc8d/fast
+    make[2]: Entering directory '/tmp/Rtmp7ZZGyp/R.INSTALL80aa85d56ebf/RcppParallel/src/tbb/build-tbb/CMakeFiles/CMakeScratch/TryCompile-E0rS9L'
+    make  -f CMakeFiles/cmTC_1dc8d.dir/build.make CMakeFiles/cmTC_1dc8d.dir/build
+    make[3]: Entering directory '/tmp/Rtmp7ZZGyp/R.INSTALL80aa85d56ebf/RcppParallel/src/tbb/build-tbb/CMakeFiles/CMakeScratch/TryCompile-E0rS9L'
+    Building CXX object CMakeFiles/cmTC_1dc8d.dir/testCXXCompiler.cxx.o
+    /home/theo/cuplr/.pixi/envs/default/bin/g++   -I/usr/local/include -std=gnu++20 -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -o CMakeFiles/cmTC_1dc8d.dir/testCXXCompiler.cxx.o -c /tmp/Rtmp7ZZGyp/R.INSTALL80aa85d56ebf/RcppParallel/src/tbb/build-tbb/CMakeFiles/CMakeScratch/TryCompile-E0rS9L/testCXXCompiler.cxx
+    Linking CXX executable cmTC_1dc8d
+    /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1dc8d.dir/link.txt --verbose=1
+    /home/theo/cuplr/.pixi/envs/default/bin/../libexec/gcc/x86_64-conda-linux-gnu/14.3.0/ld: /home/theo/cuplr/.pixi/envs/default/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib/../lib/Scrt1.o: in function `_start':
+    (.text+0x16): undefined reference to `__libc_csu_fini'
+    /home/theo/cuplr/.pixi/envs/default/bin/../libexec/gcc/x86_64-conda-linux-gnu/14.3.0/ld: (.text+0x1d): undefined reference to `__libc_csu_init'
+    collect2: error: ld returned 1 exit status
+    /home/theo/cuplr/.pixi/envs/default/bin/g++ -I/usr/local/include -std=gnu++20 -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -L/usr/lib  CMakeFiles/cmTC_1dc8d.dir/testCXXCompiler.cxx.o -o cmTC_1dc8d
+    make[3]: *** [CMakeFiles/cmTC_1dc8d.dir/build.make:102: cmTC_1dc8d] Error 1
+    make[3]: Leaving directory '/tmp/Rtmp7ZZGyp/R.INSTALL80aa85d56ebf/RcppParallel/src/tbb/build-tbb/CMakeFiles/CMakeScratch/TryCompile-E0rS9L'
+    make[2]: *** [Makefile:134: cmTC_1dc8d/fast] Error 2
+    make[2]: Leaving directory '/tmp/Rtmp7ZZGyp/R.INSTALL80aa85d56ebf/RcppParallel/src/tbb/build-tbb/CMakeFiles/CMakeScratch/TryCompile-E0rS9L'
+    
+    
+
+
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:56 (project)
+
+
+-- Configuring incomplete, errors occurred!
+Error in useBundledTbb() : error configuring tbb (status code 1)
+In addition: Warning message:
+In system2(cmake, shQuote(cmakeFlags), stdout = TRUE, stderr = TRUE) :
+  running command ''/usr/bin/cmake' '-DCMAKE_C_COMPILER=gcc' '-DCMAKE_CXX_COMPILER=g++' '-DCMAKE_C_FLAGS=-I/usr/local/include -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects ' '-DCMAKE_CXX_FLAGS=-I/usr/local/include -std=gnu++20 -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  ' '-DTBB_DISABLE_HWLOC_AUTOMATIC_SEARCH=1' '-DTBB_TEST=0' '-DTBB_EXAMPLES=0' '-DTBB_STRICT=0' '..' 2>&1' had status 1
+Execution halted
+make[1]: *** [Makevars:29: tbb] Error 1
+make[1]: Leaving directory '/tmp/Rtmp7ZZGyp/R.INSTALL80aa85d56ebf/RcppParallel/src'
+ERROR: compilation failed for package ‘RcppParallel’
+* removing ‘/home/theo/cuplr/scratchpad/benchmarks/rlib/RcppParallel’
+* installing *source* package ‘RcppArmadillo’ ...
+** this is package ‘RcppArmadillo’ version ‘15.6.2-1’
+** package ‘RcppArmadillo’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C++... yes
+checking whether g++ -std=gnu++20 accepts -g... yes
+checking for g++ -std=gnu++20 option to enable C++11 features... -std=gnu++11
+checking how to run the C++ preprocessor... g++ -std=gnu++20 -std=gnu++11 -E
+checking whether the compiler supports GNU C++... (cached) yes
+checking whether g++ -std=gnu++20 -std=gnu++11 accepts -g... (cached) yes
+checking for g++ -std=gnu++20 -std=gnu++11 option to enable C++11 features... (cached) -std=gnu++11
+checking what system we are on... running Linux on x86_64
+checking whether we have a suitable tempdir... /tmp
+checking whether on Linux... yes
+checking whether R CMD SHLIB can already compile OpenMP programs... yes
+checking whether on macOS... no
+checking for OpenMP... found and suitable
+configure: creating ./config.status
+config.status: creating inst/include/RcppArmadillo/config/RcppArmadilloConfigGenerated.h
+config.status: creating src/Makevars
+** libs
+using C++ compiler: ‘g++ (conda-forge gcc 14.3.0-16) 14.3.0’
+make[1]: Entering directory '/tmp/Rtmp31D1Am/R.INSTALL80aaa3c4be3e9/RcppArmadillo/src'
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG -I../inst/include -DARMA_USE_CURRENT -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c RcppArmadillo.cpp -o RcppArmadillo.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG -I../inst/include -DARMA_USE_CURRENT -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG -I../inst/include -DARMA_USE_CURRENT -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c fastLm.cpp -o fastLm.o
+g++ -std=gnu++20 -shared -L/usr/lib64/R/lib -L/usr/lib -o RcppArmadillo.so RcppArmadillo.o RcppExports.o fastLm.o -fopenmp -llapack -lblas -lgfortran -lm -latomic_asneeded -lquadmath -L/usr/lib64/R/lib -lR
+/home/theo/cuplr/.pixi/envs/default/bin/../libexec/gcc/x86_64-conda-linux-gnu/14.3.0/ld: cannot find -latomic_asneeded: No such file or directory
+collect2: error: ld returned 1 exit status
+make[1]: *** [/usr/share/R//make/shlib.mk:10: RcppArmadillo.so] Error 1
+make[1]: Leaving directory '/tmp/Rtmp31D1Am/R.INSTALL80aaa3c4be3e9/RcppArmadillo/src'
+ERROR: compilation failed for package ‘RcppArmadillo’
+* removing ‘/home/theo/cuplr/scratchpad/benchmarks/rlib/RcppArmadillo’
+
+The downloaded source packages are in
+	‘/tmp/RtmpnnR0ty/downloaded_packages’
+== installing slider
+also installing the dependency ‘warp’
+
+trying URL 'https://cloud.r-project.org/src/contrib/warp_0.2.3.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/slider_0.3.3.tar.gz'
+begin installing package ‘warp’
+* installing *source* package ‘warp’ ...
+** this is package ‘warp’ version ‘0.2.3’
+** package ‘warp’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (conda-forge gcc 14.3.0-16) 14.3.0’
+make[1]: Entering directory '/tmp/Rtmp6nglSU/R.INSTALL80dc01b06955e/warp/src'
+gcc -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c boundary.c -o boundary.o
+gcc -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c change.c -o change.o
+gcc -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c coercion.c -o coercion.o
+gcc -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c date.c -o date.o
+gcc -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c distance.c -o distance.o
+gcc -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c divmod.c -o divmod.o
+gcc -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c get.c -o get.o
+gcc -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c init.c -o init.o
+gcc -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c timezone.c -o timezone.o
+gcc -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c utils.c -o utils.o
+gcc -shared -L/usr/lib64/R/lib -L/usr/lib -o warp.so boundary.o change.o coercion.o date.o distance.o divmod.o get.o init.o timezone.o utils.o -L/usr/lib64/R/lib -lR
+make[1]: Leaving directory '/tmp/Rtmp6nglSU/R.INSTALL80dc01b06955e/warp/src'
+installing to /home/theo/cuplr/scratchpad/benchmarks/rlib/00LOCK-warp/00new/warp/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (warp)
+begin installing package ‘slider’
+* installing *source* package ‘slider’ ...
+** this is package ‘slider’ version ‘0.3.3’
+** package ‘slider’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (conda-forge gcc 14.3.0-16) 14.3.0’
+using C++ compiler: ‘g++ (conda-forge gcc 14.3.0-16) 14.3.0’
+make[1]: Entering directory '/tmp/RtmpSYiwHE/R.INSTALL811401cc0a4d3/slider/src'
+gcc -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/vctrs/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c block.c -o block.o
+gcc -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/vctrs/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c hop.c -o hop.o
+gcc -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/vctrs/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c index.c -o index.o
+gcc -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/vctrs/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c init.c -o init.o
+gcc -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/vctrs/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c params.c -o params.o
+gcc -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/vctrs/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c segment-tree.c -o segment-tree.o
+gcc -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/vctrs/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c slide-period.c -o slide-period.o
+gcc -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/vctrs/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c slide.c -o slide.o
+gcc -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/vctrs/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c slider-vctrs-private.c -o slider-vctrs-private.o
+gcc -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/vctrs/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c slider-vctrs-public.c -o slider-vctrs-public.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/vctrs/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c summary-core-align.cpp -o summary-core-align.o
+gcc -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/vctrs/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c summary-index.c -o summary-index.o
+gcc -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/vctrs/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c summary-slide.c -o summary-slide.o
+gcc -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/vctrs/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c utils.c -o utils.o
+g++ -std=gnu++20 -shared -L/usr/lib64/R/lib -L/usr/lib -o slider.so block.o hop.o index.o init.o params.o segment-tree.o slide-period.o slide.o slider-vctrs-private.o slider-vctrs-public.o summary-core-align.o summary-index.o summary-slide.o utils.o -L/usr/lib64/R/lib -lR
+make[1]: Leaving directory '/tmp/RtmpSYiwHE/R.INSTALL811401cc0a4d3/slider/src'
+installing to /home/theo/cuplr/scratchpad/benchmarks/rlib/00LOCK-slider/00new/slider/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (slider)
+
+The downloaded source packages are in
+	‘/tmp/RtmpnnR0ty/downloaded_packages’
+== installing RcppRoll
+trying URL 'https://cloud.r-project.org/src/contrib/RcppRoll_0.4.0.tar.gz'
+Content type 'application/x-gzip' length 38950 bytes (38 KB)
+==================================================
+downloaded 38 KB
+
+* installing *source* package ‘RcppRoll’ ...
+** this is package ‘RcppRoll’ version ‘0.4.0’
+** package ‘RcppRoll’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (conda-forge gcc 14.3.0-16) 14.3.0’
+using C++ compiler: ‘g++ (conda-forge gcc 14.3.0-16) 14.3.0’
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c RcppRoll.cpp -o RcppRoll.o
+gcc -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c init.c -o init.o
+g++ -std=gnu++20 -shared -L/usr/lib64/R/lib -L/usr/lib -o RcppRoll.so RcppRoll.o init.o -fopenmp -L/usr/lib64/R/lib -lR
+/home/theo/cuplr/.pixi/envs/default/bin/../libexec/gcc/x86_64-conda-linux-gnu/14.3.0/ld: error in /usr/lib/libc_nonshared.a(pthread_atfork.oS)(.sframe); no .sframe will be created
+installing to /home/theo/cuplr/scratchpad/benchmarks/rlib/00LOCK-RcppRoll/00new/RcppRoll/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (RcppRoll)
+
+The downloaded source packages are in
+	‘/tmp/RtmpnnR0ty/downloaded_packages’
+== installing zoo
+trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.9-1.tar.gz'
+Content type 'application/x-gzip' length 691004 bytes (674 KB)
+==================================================
+downloaded 674 KB
+
+* installing *source* package ‘zoo’ ...
+** this is package ‘zoo’ version ‘1.9-1’
+** package ‘zoo’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (conda-forge gcc 14.3.0-16) 14.3.0’
+gcc -I"/usr/include/R/" -DNDEBUG -I../inst/include  -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c coredata.c -o coredata.o
+gcc -I"/usr/include/R/" -DNDEBUG -I../inst/include  -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c init.c -o init.o
+gcc -I"/usr/include/R/" -DNDEBUG -I../inst/include  -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c lag.c -o lag.o
+gcc -shared -L/usr/lib64/R/lib -L/usr/lib -o zoo.so coredata.o init.o lag.o -L/usr/lib64/R/lib -lR
+installing to /home/theo/cuplr/scratchpad/benchmarks/rlib/00LOCK-zoo/00new/zoo/libs
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (zoo)
+
+The downloaded source packages are in
+	‘/tmp/RtmpnnR0ty/downloaded_packages’
+== installing runner
+trying URL 'https://cloud.r-project.org/src/contrib/runner_0.4.6.tar.gz'
+Content type 'application/x-gzip' length 1072174 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+* installing *source* package ‘runner’ ...
+** this is package ‘runner’ version ‘0.4.6’
+** package ‘runner’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (conda-forge gcc 14.3.0-16) 14.3.0’
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c fill_run.cpp -o fill_run.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c lag_run.cpp -o lag_run.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c length_run.cpp -o length_run.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c minmax_run.cpp -o minmax_run.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c runner.cpp -o runner.o
+g++ -std=gnu++20 -shared -L/usr/lib64/R/lib -L/usr/lib -o runner.so RcppExports.o fill_run.o lag_run.o length_run.o minmax_run.o runner.o -L/usr/lib64/R/lib -lR
+installing to /home/theo/cuplr/scratchpad/benchmarks/rlib/00LOCK-runner/00new/runner/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (runner)
+
+The downloaded source packages are in
+	‘/tmp/RtmpnnR0ty/downloaded_packages’
+== installing microbenchmark
+trying URL 'https://cloud.r-project.org/src/contrib/microbenchmark_1.5.0.tar.gz'
+Content type 'application/x-gzip' length 61673 bytes (60 KB)
+==================================================
+downloaded 60 KB
+
+* installing *source* package ‘microbenchmark’ ...
+** this is package ‘microbenchmark’ version ‘1.5.0’
+** package ‘microbenchmark’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking for x86_64-conda-linux-gnu-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for stdint.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for sys/time.h... yes
+checking for uint64_t... yes
+checking for error_at_line... yes
+checking for mach_absolute_time... no
+checking for library containing clock_gettime... none required
+checking for best clockid_t to use with clock_gettime... CLOCK_MONOTONIC_RAW
+configure: creating ./config.status
+config.status: creating src/Makevars
+config.status: creating src/config.h
+** libs
+using C compiler: ‘gcc (conda-forge gcc 14.3.0-16) 14.3.0’
+gcc -I"/usr/include/R/" -DNDEBUG -D_POSIX_C_SOURCE=200112L -DHAVE_CONFIG_H  -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c do_nothing.c -o do_nothing.o
+gcc -I"/usr/include/R/" -DNDEBUG -D_POSIX_C_SOURCE=200112L -DHAVE_CONFIG_H  -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c init.c -o init.o
+gcc -I"/usr/include/R/" -DNDEBUG -D_POSIX_C_SOURCE=200112L -DHAVE_CONFIG_H  -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c nanotimer.c -o nanotimer.o
+gcc -shared -L/usr/lib64/R/lib -L/usr/lib -o microbenchmark.so do_nothing.o init.o nanotimer.o -L/usr/lib64/R/lib -lR
+installing to /home/theo/cuplr/scratchpad/benchmarks/rlib/00LOCK-microbenchmark/00new/microbenchmark/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (microbenchmark)
+
+The downloaded source packages are in
+	‘/tmp/RtmpnnR0ty/downloaded_packages’
+== installing ggdist
+also installing the dependencies ‘distributional’, ‘numDeriv’, ‘quadprog’
+
+trying URL 'https://cloud.r-project.org/src/contrib/distributional_0.9.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/numDeriv_2016.8-1.1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/quadprog_1.5-8.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggdist_3.3.3.tar.gz'
+begin installing package ‘numDeriv’
+begin installing package ‘quadprog’
+* installing *source* package ‘numDeriv’ ...
+** this is package ‘numDeriv’ version ‘2016.8-1.1’
+** package ‘numDeriv’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (numDeriv)
+begin installing package ‘distributional’
+make: *** [Makefile:9: quadprog.ts] Error 1
+* installing *source* package ‘distributional’ ...
+** this is package ‘distributional’ version ‘0.9.0’
+** package ‘distributional’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (distributional)
+make: Target 'all' not remade because of errors.
+* installing *source* package ‘quadprog’ ...
+** this is package ‘quadprog’ version ‘1.5-8’
+** package ‘quadprog’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (conda-forge gcc 14.3.0-16) 14.3.0’
+using Fortran compiler: ‘GNU Fortran (GCC) 16.2.1 20260810’
+make[1]: Entering directory '/tmp/Rtmpf3lB6a/R.INSTALL8162a3651f50f/quadprog/src'
+gfortran  -fvisibility=hidden -fpic -march=x86-64 -mtune=generic -O2 -pipe -fno-plt         -Wp,-D_FORTIFY_SOURCE=3 -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -msse2 -mfpmath=sse   -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt         -Wp,-D_FORTIFY_SOURCE=3 -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r  -c aind.f -o aind.o
+gcc -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c init.c -o init.o
+gfortran  -fvisibility=hidden -fpic -march=x86-64 -mtune=generic -O2 -pipe -fno-plt         -Wp,-D_FORTIFY_SOURCE=3 -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -msse2 -mfpmath=sse   -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt         -Wp,-D_FORTIFY_SOURCE=3 -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r  -c solve.QP.compact.f -o solve.QP.compact.o
+gfortran  -fvisibility=hidden -fpic -march=x86-64 -mtune=generic -O2 -pipe -fno-plt         -Wp,-D_FORTIFY_SOURCE=3 -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -msse2 -mfpmath=sse   -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt         -Wp,-D_FORTIFY_SOURCE=3 -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r  -c solve.QP.f -o solve.QP.o
+gfortran  -fvisibility=hidden -fpic -march=x86-64 -mtune=generic -O2 -pipe -fno-plt         -Wp,-D_FORTIFY_SOURCE=3 -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -msse2 -mfpmath=sse   -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt         -Wp,-D_FORTIFY_SOURCE=3 -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r  -c util.f -o util.o
+gcc -shared -L/usr/lib64/R/lib -L/usr/lib -o quadprog.so aind.o init.o solve.QP.compact.o solve.QP.o util.o -lblas -lgfortran -lm -latomic_asneeded -lquadmath -lgfortran -lm -latomic_asneeded -lquadmath -L/usr/lib64/R/lib -lR
+/home/theo/cuplr/.pixi/envs/default/bin/../libexec/gcc/x86_64-conda-linux-gnu/14.3.0/ld: cannot find -latomic_asneeded: No such file or directory
+collect2: error: ld returned 1 exit status
+make[1]: *** [/usr/share/R//make/shlib.mk:10: quadprog.so] Error 1
+make[1]: Leaving directory '/tmp/Rtmpf3lB6a/R.INSTALL8162a3651f50f/quadprog/src'
+ERROR: compilation failed for package ‘quadprog’
+* removing ‘/home/theo/cuplr/scratchpad/benchmarks/rlib/quadprog’
+
+The downloaded source packages are in
+	‘/tmp/RtmpnnR0ty/downloaded_packages’
+== installing paletteer
+also installing the dependencies ‘prismatic’, ‘rematch2’
+
+trying URL 'https://cloud.r-project.org/src/contrib/prismatic_1.1.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/rematch2_2.1.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/paletteer_1.7.0.tar.gz'
+begin installing package ‘prismatic’
+begin installing package ‘rematch2’
+* installing *source* package ‘prismatic’ ...
+** this is package ‘prismatic’ version ‘1.1.2’
+** package ‘prismatic’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (prismatic)
+* installing *source* package ‘rematch2’ ...
+** this is package ‘rematch2’ version ‘2.1.2’
+** package ‘rematch2’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (rematch2)
+begin installing package ‘paletteer’
+* installing *source* package ‘paletteer’ ...
+** this is package ‘paletteer’ version ‘1.7.0’
+** package ‘paletteer’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (paletteer)
+
+The downloaded source packages are in
+	‘/tmp/RtmpnnR0ty/downloaded_packages’
+== installing ggtext
+also installing the dependencies ‘jpeg’, ‘gridtext’
+
+trying URL 'https://cloud.r-project.org/src/contrib/jpeg_0.1-11.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/gridtext_0.1.6.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggtext_0.2.0.tar.gz'
+begin installing package ‘jpeg’
+make: *** [Makefile:4: jpeg.ts] Error 1
+make: Target 'all' not remade because of errors.
+* installing *source* package ‘jpeg’ ...
+** this is package ‘jpeg’ version ‘0.1-11’
+** package ‘jpeg’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (conda-forge gcc 14.3.0-16) 14.3.0’
+make[1]: Entering directory '/tmp/RtmpneKkBP/R.INSTALL817307f429599/jpeg/src'
+gcc -I"/usr/include/R/" -DNDEBUG   -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects  -c read.c -o read.o
+In file included from read.c:1:
+rjcommon.h:11:10: fatal error: jpeglib.h: No such file or directory
+   11 | #include <jpeglib.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+make[1]: *** [/usr/lib64/R/etc/Makeconf:190: read.o] Error 1
+make[1]: Leaving directory '/tmp/RtmpneKkBP/R.INSTALL817307f429599/jpeg/src'
+ERROR: compilation failed for package ‘jpeg’
+* removing ‘/home/theo/cuplr/scratchpad/benchmarks/rlib/jpeg’
+
+The downloaded source packages are in
+	‘/tmp/RtmpnnR0ty/downloaded_packages’
+== installing runstats (CRAN Archive)
+trying URL 'https://cloud.r-project.org/src/contrib/RcppArmadillo_15.6.2-1.tar.gz'
+Content type 'application/x-gzip' length 1097105 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+* installing *source* package ‘RcppArmadillo’ ...
+** this is package ‘RcppArmadillo’ version ‘15.6.2-1’
+** package ‘RcppArmadillo’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C++... yes
+checking whether g++ -std=gnu++20 accepts -g... yes
+checking for g++ -std=gnu++20 option to enable C++11 features... -std=gnu++11
+checking how to run the C++ preprocessor... g++ -std=gnu++20 -std=gnu++11 -E
+checking whether the compiler supports GNU C++... (cached) yes
+checking whether g++ -std=gnu++20 -std=gnu++11 accepts -g... (cached) yes
+checking for g++ -std=gnu++20 -std=gnu++11 option to enable C++11 features... (cached) -std=gnu++11
+checking what system we are on... running Linux on x86_64
+checking whether we have a suitable tempdir... /tmp
+checking whether on Linux... yes
+checking whether R CMD SHLIB can already compile OpenMP programs... yes
+checking whether on macOS... no
+checking for OpenMP... found and suitable
+configure: creating ./config.status
+config.status: creating inst/include/RcppArmadillo/config/RcppArmadilloConfigGenerated.h
+config.status: creating src/Makevars
+** libs
+using C++ compiler: ‘g++ (conda-forge gcc 14.3.0-16) 14.3.0’
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG -I../inst/include -DARMA_USE_CURRENT -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c RcppArmadillo.cpp -o RcppArmadillo.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG -I../inst/include -DARMA_USE_CURRENT -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG -I../inst/include -DARMA_USE_CURRENT -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c fastLm.cpp -o fastLm.o
+g++ -std=gnu++20 -shared -L/usr/lib64/R/lib -L/usr/lib -o RcppArmadillo.so RcppArmadillo.o RcppExports.o fastLm.o -fopenmp -llapack -lblas -lgfortran -lm -latomic_asneeded -lquadmath -L/usr/lib64/R/lib -lR
+/home/theo/cuplr/.pixi/envs/default/bin/../libexec/gcc/x86_64-conda-linux-gnu/14.3.0/ld: cannot find -latomic_asneeded: No such file or directory
+collect2: error: ld returned 1 exit status
+make: *** [/usr/share/R//make/shlib.mk:10: RcppArmadillo.so] Error 1
+ERROR: compilation failed for package ‘RcppArmadillo’
+* removing ‘/home/theo/cuplr/scratchpad/benchmarks/rlib/RcppArmadillo’
+
+The downloaded source packages are in
+	‘/tmp/RtmpnnR0ty/downloaded_packages’
+trying URL 'https://cloud.r-project.org/src/contrib/Archive/runstats/runstats_1.1.0.tar.gz'
+Content type 'application/x-gzip' length 3904589 bytes (3.7 MB)
+==================================================
+downloaded 3.7 MB
+
+ERROR: dependency ‘fftwtools’ is not available for package ‘runstats’
+Perhaps try a variation of:
+install.packages('fftwtools')
+* removing ‘/home/theo/cuplr/scratchpad/benchmarks/rlib/runstats’
+== installing RollingWindow (GitHub master tarball)
+trying URL 'https://github.com/andrewuhl/RollingWindow/archive/refs/heads/master.tar.gz'
+downloaded 35 KB
+
+Warning in untar2(tarfile, files, list, exdir, restore_times, allow_all) :
+  skipping pax global extended headers
+* installing *source* package ‘RollingWindow’ ...
+** this is package ‘RollingWindow’ version ‘0.2’
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (conda-forge gcc 14.3.0-16) 14.3.0’
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c RollingWindow.cpp -o RollingWindow.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c expanding_median.cpp -o expanding_median.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/r/src=/usr/src/debug/r -flto=auto -ffat-lto-objects   -c rolling_median.cpp -o rolling_median.o
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_NaSub(SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:40:17: error: format not a string literal and no format arguments [-Werror=format-security]
+   40 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingBeta(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:75:17: error: format not a string literal and no format arguments [-Werror=format-security]
+   75 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingCompound(SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:109:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  109 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingCov(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:144:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  144 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingCorr(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:179:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  179 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingKurt(SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:213:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  213 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingMax(SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:246:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  246 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingMean(SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:279:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  279 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingMAE(SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:313:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  313 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingMS(SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:346:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  346 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingMSE(SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:380:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  380 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingMedian(SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:413:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  413 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingMin(SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:446:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  446 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingProd(SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:479:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  479 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingRMSE(SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:513:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  513 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingSkew(SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:547:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  547 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingStd(SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:581:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  581 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingSum(SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:614:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  614 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingSumprod(SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:648:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  648 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingSS(SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:681:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  681 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingSSE(SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:715:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  715 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingVar(SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:749:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  749 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingZscore(SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:783:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  783 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RcppExports.cpp: In function 'SEXPREC* RollingWindow_RollingSharpe(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP)':
+RcppExports.cpp:818:17: error: format not a string literal and no format arguments [-Werror=format-security]
+  818 |         Rf_error(CHAR(rcpp_msgSEXP_gen));
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+cc1plus: some warnings being treated as errors
+make: *** [/usr/lib64/R/etc/Makeconf:199: RcppExports.o] Error 1
+make: *** Waiting for unfinished jobs....
+ERROR: compilation failed for package ‘RollingWindow’
+* removing ‘/home/theo/cuplr/scratchpad/benchmarks/rlib/RollingWindow’
+
+==== install summary (LIB = /home/theo/cuplr/scratchpad/benchmarks/rlib) ====
+        package version                  status
+           roll    <NA> not run: install failed
+         slider   0.3.3                      ok
+       RcppRoll   0.4.0                      ok
+            zoo   1.9.1                      ok
+         runner   0.4.6                      ok
+ microbenchmark   1.5.0                      ok
+         ggdist    <NA> not run: install failed
+      paletteer   1.7.0                      ok
+         ggtext    <NA> not run: install failed
+     data.table  1.18.4                      ok
+        ggplot2   4.0.3                      ok
+         scales   1.4.0                      ok
+      patchwork   1.3.2                      ok
+       runstats    <NA> not run: install failed
+  RollingWindow    <NA> not run: install failed
+                                                                                      note
+ not loadable; installation of 3 packages failed:  ‘RcppParallel’, ‘RcppArmadillo’, ‘roll’
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+                    not loadable; installation of 2 packages failed:  ‘quadprog’, ‘ggdist’
+                                                                                          
+            not loadable; installation of 3 packages failed:  ‘jpeg’, ‘gridtext’, ‘ggtext’
+                                                                         already installed
+                                                                         already installed
+                                                                         already installed
+                                                                         already installed
+                                                                installed but not loadable
+                                                                installed but not loadable
+Warning messages:
+1: In install.packages(d, lib = LIB, repos = repos) :
+  installation of package ‘RcppArmadillo’ had non-zero exit status
+2: In install.packages(paste0(base, newest), lib = LIB, repos = NULL,  :
+  installation of package ‘/tmp/RtmpnnR0ty/downloaded_packages/runstats_1.1.0.tar.gz’ had non-zero exit status
+3: In install.packages("https://github.com/andrewuhl/RollingWindow/archive/refs/heads/master.tar.gz",  :
+  installation of package ‘/tmp/RtmpnnR0ty/downloaded_packages/master.tar.gz’ had non-zero exit status
+
+real	0m57.576s
+user	1m14.899s
+sys	0m5.478s

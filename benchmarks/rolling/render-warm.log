@@ -1,0 +1,100 @@
+start 13:41:45
+[gpu-run] lock acquired after 0s (r)
+cuplyr: GPU-accelerated data manipulation
+GPU: NVIDIA GeForce RTX 5070 (12.0)
+Memory: 11.7 GB free / 12.4 GB total
+quarto render /home/theo/cuplr-wt/F63/bench/rolling-window.qmd -P root:/home/theo/cuplr-wt/F63 --output-dir /tmp/RtmplYp56T/rolling-html-a455864c3f258
+[31m
+
+processing file: rolling-window.qmd
+[39m1/65                       
+2/65 [setup]               
+3/65                       
+4/65 [bench-main]          
+5/65                       
+6/65 [bench-overhead]      
+7/65                       
+8/65 [bench-ext]           
+9/65                       
+10/65 [bench-memory]        
+11/65                       
+12/65 [bench-fence]         
+13/65                       
+14/65 [bench-runstats-shift]
+15/65                       
+16/65 [bench-cores]         
+17/65                       
+18/65 [data]                
+19/65                       
+20/65 [hardware]            
+21/65                       
+22/65 [helpers]             
+23/65                       
+24/65 [source-lines]        
+25/65                       
+26/65 [claims]              
+27/65                       
+28/65 [csv]                 
+29/65                       
+30/65 [plots]               
+31/65                       
+32/65 [skipped-table]       
+33/65                       
+34/65 [threads-table]       
+35/65                       
+36/65 [versions-table]      
+37/65                       
+38/65 [install-table]       
+39/65                       
+40/65 [results-mean]        
+41/65                       
+42/65 [results-median]      
+43/65                       
+44/65 [results-min]         
+45/65                       
+46/65 [results-max]         
+47/65                       
+48/65 [results-sum]         
+49/65                       
+50/65 [results-sd]          
+51/65                       
+52/65 [results-custom]      
+53/65                       
+54/65 [cuts-table]          
+55/65                       
+56/65 [correctness-bad]     
+57/65                       
+58/65 [extension-table]     
+59/65                       
+60/65 [extension-plot]      
+61/65                       
+62/65 [overhead-table]      
+63/65                       
+64/65 [memory-table]        
+65/65                       
+[31moutput file: rolling-window.knit.md
+
+[39m[1mpandoc [22m
+  to: html
+  output-file: rolling-window.html
+  standalone: true
+  embed-resources: true
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  title: Rolling-window benchmark, redone with cuplyr
+  
+Output created: ../../../../../tmp/RtmplYp56T/rolling-html-a455864c3f258/rolling-window.html
+
+wrote /home/theo/cuplr/scratchpad/benchmarks/rolling/rolling-window.html
+end 13:41:55

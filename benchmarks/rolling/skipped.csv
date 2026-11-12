@@ -1,0 +1,4 @@
+"chunk","stat","fn","width","reason","note"
+"bench-main","median","cuplyr",11,"cuplyr: mutate() fell back to CPU evaluation for: mutate()","not timed: the probe call fell back to the CPU"
+"bench-main","median","cuplyr",101,"cuplyr: mutate() fell back to CPU evaluation for: mutate()","not timed: the probe call fell back to the CPU"
+"bench-main","median","cuplyr",1001,"cuplyr: mutate() fell back to CPU evaluation for: mutate()","not timed: the probe call fell back to the CPU"

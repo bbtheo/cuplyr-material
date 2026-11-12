@@ -1,0 +1,16 @@
+"form","rows","status","detail","result_rows"
+"cuplyr_rowwise",100000,"ok","",20
+"dplyr_rowwise",100000,"ok","",20
+"dplyr_vectorised",100000,"ok","",20
+"datatable_vectorised",100000,"ok","",20
+"duckdb",100000,"ok","",20
+"cuplyr_rowwise",1000000,"ok","",20
+"dplyr_rowwise",1000000,"capped","capped: the call ran over 60 s",
+"dplyr_vectorised",1000000,"ok","",20
+"datatable_vectorised",1000000,"ok","",20
+"duckdb",1000000,"ok","",20
+"cuplyr_rowwise",10000000,"ok","",20
+"dplyr_vectorised",10000000,"ok","",20
+"datatable_vectorised",10000000,"ok","",20
+"duckdb",10000000,"ok","",20
+"dplyr_rowwise",10000000,"not_run","capped at 1,000,000 rows",

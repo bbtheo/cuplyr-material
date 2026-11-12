@@ -1,0 +1,56 @@
+[gpu-run] lock acquired after 0s (r)
+cuplyr: GPU-accelerated data manipulation
+GPU: NVIDIA GeForce RTX 5070 (12.0)
+Memory: 11.7 GB free / 12.4 GB total
+== installing RollingWindow (GitHub master tarball)
+trying URL 'https://github.com/andrewuhl/RollingWindow/archive/refs/heads/master.tar.gz'
+Content type 'application/x-gzip' length 36737 bytes (35 KB)
+==================================================
+downloaded 35 KB
+
+Warning in untar2(tarfile, files, list, exdir, restore_times, allow_all) :
+  skipping pax global extended headers
+* installing *source* package ‘RollingWindow’ ...
+** this is package ‘RollingWindow’ version ‘0.2’
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 16.2.1 20260810’
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -O2 -g -Wno-format-security  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -O2 -g -Wno-format-security  -c RollingWindow.cpp -o RollingWindow.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -O2 -g -Wno-format-security  -c expanding_median.cpp -o expanding_median.o
+g++ -std=gnu++20 -I"/usr/include/R/" -DNDEBUG  -I'/home/theo/R/x86_64-pc-linux-gnu-library/4.6/Rcpp/include' -I/usr/local/include    -fpic  -O2 -g -Wno-format-security  -c rolling_median.cpp -o rolling_median.o
+g++ -std=gnu++20 -shared -L/usr/lib64/R/lib -Wl,-O1 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,-z,pack-relative-relocs -flto=auto -o RollingWindow.so RcppExports.o RollingWindow.o expanding_median.o rolling_median.o -L/usr/lib64/R/lib -lR
+installing to /home/theo/cuplr/scratchpad/benchmarks/rlib/00LOCK-RollingWindow-master/00new/RollingWindow/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (RollingWindow)
+
+==== install summary (LIB = /home/theo/cuplr/scratchpad/benchmarks/rlib) ====
+        package version status              note
+           roll   1.2.1     ok already installed
+         slider   0.3.3     ok already installed
+       RcppRoll   0.4.0     ok already installed
+            zoo   1.9.1     ok already installed
+         runner   0.4.6     ok already installed
+ microbenchmark   1.5.0     ok already installed
+         ggdist   3.3.3     ok already installed
+      paletteer   1.7.0     ok already installed
+         ggtext   0.2.0     ok already installed
+     data.table  1.18.4     ok already installed
+        ggplot2   4.0.3     ok already installed
+         scales   1.4.0     ok already installed
+      patchwork   1.3.2     ok already installed
+       runstats   1.1.0     ok already installed
+  RollingWindow     0.2     ok                  
+
+real	0m5.417s
+user	0m6.559s
+sys	0m0.744s

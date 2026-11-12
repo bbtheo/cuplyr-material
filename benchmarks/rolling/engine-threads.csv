@@ -1,0 +1,5 @@
+"engine","config","threads"
+"DuckDB","default",24
+"DuckDB","1 thread",1
+"polars","default",24
+"polars","1 thread",1

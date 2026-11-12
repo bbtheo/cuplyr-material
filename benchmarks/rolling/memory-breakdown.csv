@@ -1,0 +1,4 @@
+"call","n_rows","x_column_bytes","allocated_bytes","held_after_call_bytes","peak_bytes","held_after_gc_bytes"
+"window mutate(r = roll_mean(x, 101))",1e+07,8e+07,893122100,81250048,530000054,81250048
+"plain mutate(y = x + 1)",1e+07,8e+07,80000220,8e+07,80000220,8e+07
+"window mutate(r = cumsum(x))",1e+07,8e+07,280103273,8e+07,280000013,8e+07

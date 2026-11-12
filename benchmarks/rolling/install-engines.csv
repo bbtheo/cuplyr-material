@@ -1,0 +1,5 @@
+package,version,repo,how,secs,status,date
+duckdb,2.0.0,https://cloud.r-project.org,"CRAN source build (C++), system gcc 16.2.1, MAKEFLAGS=-j16, R Makeconf flags (-O2 -march=x86-64 -mtune=generic -flto=auto)",396.174,ok,2026-10-26
+polars,2.0.0,https://community.r-multiverse.org,"source package with NOT_CRAN=true: downloaded the prebuilt Rust library libr_polars-2.0.0-rc.3-x86_64-unknown-linux-gnu (SHA256 checked); no cargo build",25.788,ok,2026-10-26
+DBI,1.3.0,,"already in the user R library; not installed",NA,already installed,2026-10-26
+callr,3.8.0,,"already in the user R library; not installed",NA,already installed,2026-10-26
