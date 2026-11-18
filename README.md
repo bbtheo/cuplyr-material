@@ -14,6 +14,14 @@ cell puts R, RAPIDS libcudf and the CUDA toolkit into one micromamba env under `
 builds cuplyr from GitHub, so nothing mixes with Colab's own R or libstdc++. Cells that start
 with `%%R` run in one R session that lasts as long as the notebook.
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bbtheo/cuplyr-material/blob/main/notebooks/cuplyr-vs-datatable-colab.ipynb)
+
+`notebooks/cuplyr-vs-datatable-colab.ipynb` races cuplyr against plain data.table (not dtplyr)
+on 2e7 rows: group by with few and many groups, joins to a small and a big table, top N, grouped
+rolling means, returning a large result, parquet and CSV files to a summary, and a size sweep.
+data.table runs on every core with GForce, which the notebook shows, and each task checks that
+both sides return the same result.
+
 ## Layout
 
 ```
@@ -29,7 +37,8 @@ benchmarks/
 social/
   parquet-to-summary/ the four post images, plus build/ with the scripts that make them
 notebooks/
-  try-cuplyr-colab.ipynb  install-and-try notebook for Google Colab
+  try-cuplyr-colab.ipynb        install-and-try notebook for Google Colab
+  cuplyr-vs-datatable-colab.ipynb  cuplyr against data.table on Colab
 ```
 
 Not tracked (see `.gitignore`): the generated parquet files (`parquet-pipeline/data/`, 4.6 GB),
