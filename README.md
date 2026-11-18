@@ -17,7 +17,7 @@ with `%%R` run in one R session that lasts as long as the notebook.
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bbtheo/cuplyr-material/blob/main/notebooks/cuplyr-vs-datatable-colab.ipynb)
 
 `notebooks/cuplyr-vs-datatable-colab.ipynb` races cuplyr against plain data.table (not dtplyr)
-on 2e7 rows: group by with few and many groups, joins to a small and a big table, top N, grouped
+on 2e7 rows: grouped summaries with few and many groups, joins to a small and a big table, top N, grouped
 rolling means, returning a large result, parquet and CSV files to a summary, and a size sweep.
 data.table runs on every core with GForce, which the notebook shows, and each task checks that
 both sides return the same result.
