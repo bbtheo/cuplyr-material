@@ -10,8 +10,10 @@ holds what is written about it.
 
 `notebooks/try-cuplyr-colab.ipynb` installs cuplyr on a free Colab T4 and runs a few pipelines,
 including a dplyr-versus-cuplyr timing on 2e7 rows. It uses the default Python runtime: the first
-cell puts R, RAPIDS libcudf and the CUDA toolkit into one micromamba env under `/opt/cuplyr` and
-builds cuplyr from GitHub, so nothing mixes with Colab's own R or libstdc++. Cells that start
+cell installs R, RAPIDS libcudf 26.10 and the prebuilt `r-cuplyr` conda package from the `bbtheo`
+channel into one micromamba env under `/opt/cuplyr`, so nothing mixes with Colab's own R or
+libstdc++ and nothing is compiled. The package is built for CUDA 13, so the runtime's NVIDIA
+driver has to support CUDA 13 (r580 or newer). Cells that start
 with `%%R` run in one R session that lasts as long as the notebook.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bbtheo/cuplyr-material/blob/main/notebooks/cuplyr-vs-datatable-colab.ipynb)
